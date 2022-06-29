@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  test-framework: &draft
+    build: .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./results:/opt/project/results
+      - ./scripts:/opt/project/scripts
+    environment:
+      - TEST_VALUE="blabla"
+    entrypoint: 'python scripts/test_script.py'
