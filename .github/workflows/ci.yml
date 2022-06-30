@@ -12,10 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          sudo apt-get update --allow-insecure-repositories && \
-          sudo apt-get -y --allow-unauthenticated install \
-          docker.io \
-          docker-compose && \
-          sudo apt-get clean
+      - uses: docker-practice/actions-setup-docker@master
       - run: docker-compose run test-framework
