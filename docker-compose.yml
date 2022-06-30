@@ -8,5 +8,5 @@ services:
       - ./results:/opt/project/results
       - ./scripts:/opt/project/scripts
     environment:
-      - TEST_VALUE="blabla"
+      - TEST_VALUE=blabla
     entrypoint: 'python scripts/test_script.py'
