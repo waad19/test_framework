@@ -8,8 +8,8 @@ on:
 
 jobs:
   test-framework-build:
-    name: Run npm on Ubuntu
-    runs-on: bullseye
+    name: Run on ubuntu
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: |
