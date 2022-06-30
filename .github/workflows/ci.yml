@@ -14,3 +14,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: docker-practice/actions-setup-docker@master
       - run: docker-compose run test-framework
+  upload-files:
+    name: Upload Artifacts
+    uses: actions/upload-artifact@v3
+    with:
+      name: my-artifact
+      path: results/*
+      retention-days: 5
