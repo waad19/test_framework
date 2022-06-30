@@ -12,15 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-#      - uses: docker-practice/actions-setup-docker@master
       - run: |
           sudo apt-get update --allow-insecure-repositories && \
           sudo apt-get -y --allow-unauthenticated install \
-#          curl \
-#          netcat\
-#          ca-certificates \
-#          gnupg \
-#          lsb-release \
           docker.io \
           docker-compose && \
           sudo apt-get clean
